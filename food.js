@@ -15,6 +15,11 @@ let loadDogFoodToDom = function(dogfood){
         createBrandDiv(brand);
     });
 }
+let loadCatFoodToDom = function(catfood){
+    catfood.cat_brands.forEach(brand => {
+        createBrandDiv(brand);
+    });
+}
 
 let createBrandDiv = function(brand){
     let foodBrand  =  document.createElement('div');
@@ -37,6 +42,7 @@ let createTypeDiv = function(type) {
 }
 
 loadData("dogfood.json", loadDogFoodToDom);
+loadData("catfood.json", loadCatFoodToDom);
 // loadData("catfood.json", loadCatFoodToDom);A
 
 
